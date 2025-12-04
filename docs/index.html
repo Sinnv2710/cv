@@ -8,50 +8,75 @@
     <meta name="description" content="Portfolio site for Sinn — web developer and CV." />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <h1 class="title">Sinn</h1>
-        <nav>
+    <header class="site-header wide">
+      <div class="topbar container">
+        <div class="sublink">Based in Name town</div>
+        <nav class="nav-small">
+          <a href="#welcome">Welcome</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="#menu">Menu</a>
         </nav>
+      </div>
+      <div class="container masthead">
+        <h1 class="port">Portfolio</h1>
+        <div class="role">&gt; Web Developer <span class="year">&gt; 2029</span></div>
       </div>
     </header>
 
-    <main class="container">
-      <section class="hero">
-        <h2>Hello — I build thoughtful web things</h2>
-        <p>I'm a developer focused on small, fast, and accessible web apps. Here are a few things I've worked on.</p>
-        <p class="hero-cta">
-          <a class="btn" href="../SinNguyenVan_2026.pdf" target="_blank">View CV (PDF)</a>
-          <a class="btn ghost" href="#projects">See projects</a>
-        </p>
+    <main class="main-wrap">
+      <section id="welcome" class="hero-landing">
+        <div class="hero-inner container">
+          <div class="intro">
+            <div class="greeting">_Hello I'm</div>
+            <h2 class="name">Sinn Nguyen</h2>
+            <p class="lead">I build small interfaces and developer-focused tools — fast, accessible, and pragmatic. See my work, or download my CV directly.</p>
+            <p class="cta-row">
+              <a class="btn primary" href="/SinNguyenVan_2026.pdf" target="_blank">Download CV (PDF)</a>
+              <a class="btn ghost" href="#projects">View projects</a>
+            </p>
+          </div>
+
+          <div class="hero-screenshot">
+            <img src="./hero-preview.svg" alt="portfolio preview" />
+          </div>
+        </div>
       </section>
 
-      <section id="about" class="card">
-        <h3>About</h3>
-        <p>Hi — I'm Sinn. I enjoy building interfaces and simple tooling that make people's lives a little easier. This site is a small static portfolio that runs on free hosting.</p>
+      <section id="about" class="section-dark container">
+        <div class="two-col">
+          <div>
+            <h3>About</h3>
+            <p>I’m Sinn — a front-end focused developer who cares about simple, robust interfaces. I build static sites, small apps and developer tooling. Fast iteration and accessibility are important to me.</p>
+          </div>
+          <div>
+            <h4>Skills & tools</h4>
+            <ul class="skills">
+              <li>HTML / CSS / JS</li>
+              <li>React / Vite</li>
+              <li>Netlify / GitHub Actions</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <section id="projects" class="card">
-        <h3>Projects</h3>
-        <ul class="projects-grid">
-          <li>
+      <section id="projects" class="container">
+        <h3 class="section-title">Selected projects</h3>
+        <div class="projects-list">
+          <article class="project-card">
             <h4>CV / Portfolio</h4>
-            <p>A static site for resume and quick portfolio. Built with plain HTML/CSS so it deploys everywhere (GitHub Pages, Netlify, Vercel).</p>
-            <p><a class="link" href="#contact">Get in touch</a></p>
-          </li>
-          <li>
-            <h4>Project — placeholder</h4>
-            <p>Placeholder summary — replace with details about your real projects, links and screenshots.</p>
-          </li>
-        </ul>
+            <p>Static portfolio site — minimal, fast and deployable to Netlify (this site).</p>
+          </article>
+          <article class="project-card">
+            <h4>Placeholder project</h4>
+            <p>Replace this with real project descriptions and links to code or live demos.</p>
+          </article>
+        </div>
       </section>
 
-      <section id="contact" class="card">
+      <section id="contact" class="section-dark container last-card">
         <h3>Contact</h3>
-        <p>Want to reach me? Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p>For collaboration or questions: <a href="mailto:you@example.com">you@example.com</a></p>
       </section>
     </main>
 
