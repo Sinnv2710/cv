@@ -1,0 +1,21 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches:
+      - portfolio
+
+jobs:
+  deploy:
+    name: Deploy docs → Netlify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Netlify (via CLI)
+        uses: netlify/actions/cli@v1
+        with:
+          args: deploy --dir=docs --prod --site=$NETLIFY_SITE_ID
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
