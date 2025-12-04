@@ -1,14 +1,16 @@
 name: Deploy to Netlify
 
+# Trigger when a pull request is closed (merged) and its base branch is master
 on:
-  push:
-    branches:
-      - portfolio
+  pull_request:
+    types: [closed]
 
 jobs:
   deploy:
     name: Deploy docs → Netlify
     runs-on: ubuntu-latest
+    # only run when a pull request was merged and the target branch is `master`
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'master'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
