@@ -20,6 +20,6 @@ jobs:
         run: |
           # show version then deploy
           netlify --version
-          netlify deploy --dir=docs --prod --site="${{ secrets.NETLIFY_SITE_ID }}"
+          netlify deploy --dir=docs --prod --no-build --site="${{ secrets.NETLIFY_SITE_ID }}"
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
