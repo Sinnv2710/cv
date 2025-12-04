@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sinn — Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Portfolio site for Sinn — web developer and CV." />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="title">Sinn</h1>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>Hello — I build thoughtful web things</h2>
+        <p>I'm a developer focused on small, fast, and accessible web apps. Here are a few things I've worked on.</p>
+        <p class="hero-cta">
+          <a class="btn" href="SinNguyenVan_2026.pdf" target="_blank">View CV (PDF)</a>
+          <a class="btn ghost" href="#projects">See projects</a>
+        </p>
+      </section>
+
+      <section id="about" class="card">
+        <h3>About</h3>
+        <p>Hi — I'm Sinn. I enjoy building interfaces and simple tooling that make people's lives a little easier. This site is a small static portfolio that runs on free hosting.</p>
+      </section>
+
+      <section id="projects" class="card">
+        <h3>Projects</h3>
+        <ul class="projects-grid">
+          <li>
+            <h4>CV / Portfolio</h4>
+            <p>A static site for resume and quick portfolio. Built with plain HTML/CSS so it deploys everywhere (GitHub Pages, Netlify, Vercel).</p>
+            <p><a class="link" href="#contact">Get in touch</a></p>
+          </li>
+          <li>
+            <h4>Project — placeholder</h4>
+            <p>Placeholder summary — replace with details about your real projects, links and screenshots.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" class="card">
+        <h3>Contact</h3>
+        <p>Want to reach me? Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> Sinn — Built with <strong>HTML & CSS</strong>. Deploy: GitHub Pages or Netlify.</small>
+      </div>
+    </footer>
+
+    <script>
+      // small script to set year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
